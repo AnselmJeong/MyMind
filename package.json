@@ -1,0 +1,34 @@
+{
+  "name": "refmind",
+  "version": "1.0.0",
+  "description": "Visual bookmark & site intelligence desktop app for mymind built with Electrobun v2",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run build:view && bunx electrobun dev",
+    "dev:hmr": "concurrently -k \"bun run dev:vite\" \"bunx electrobun dev\"",
+    "dev:vite": "vite",
+    "build:view": "vite build",
+    "build": "bun run build:view && bunx electrobun build",
+    "build:canary": "bun run build:view && bunx electrobun build --env=canary",
+    "build:stable": "bun run build:view && bunx electrobun build --env=stable",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "lucide-react": "^0.511.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.7",
+    "@types/bun": "^1.2.13",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^4.5.0",
+    "concurrently": "^9.1.2",
+    "electrobun": "^2.0.7",
+    "tailwindcss": "^4.1.7",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
